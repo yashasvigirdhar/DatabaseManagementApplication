@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <?php
+        require 'core.inc.php';
+        require 'connect.inc.php';
+       if(loggedin()){
+           echo 'o yeah!logged in successfully ..aha ahaaa'.'<a href="logout.php">log out</a>';
+           echo getuserfield('lastname');
+       } 
+       else
+       {
+        include 'login.inc.php';
+        include 'mail.php';
+       }
+    
+        ?>
+    </body>
+</html>

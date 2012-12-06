@@ -1,0 +1,115 @@
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && ($_SESSION['loggedin'] == true)) {
+	// echo "welcome"
+} else {
+    header('Location: access.php');
+}
+?>
+
+ <?php
+session_start();
+
+
+if(isset($_SESSION['view']))
+$_SESSION['view']=$_SESSION['view']+1;
+else{
+$_SESSION['view']=1; 
+$uname =$_GET['name'];
+$ussn =$_GET['ssn'];
+}
+
+//echo "Views=". $_SESSION['view'];
+?> 
+
+<?php
+//echo "hello";
+ require 'connect.inc.php';
+ $name=$_POST['cat'];
+ $q="select DNO from DEPARTMENT1 where NAME='$name'";
+ $result=mysql_query($q);
+ $row=mysql_fetch_array($result);
+ $no=$row['DNO'];
+ $query="delete from DEPARTMENT1 where DNO='$no'";
+ $query_run=  mysql_query($query);
+ if($query_run)
+ {
+ 	$query1="delete from DEPARTMENT2 where NAME='$name'";
+ 	$res=mysql_query($query1);
+     echo "<script type='text/javascript'>alert('department deleted');</script>";
+     mysql_close(mysql_connect("localhost","root", "pt1234"));
+ }
+ else {
+ 	mysql_errno($link_identifier = null);
+ 	//echo "there are employees associated with the department";
+ 	}
+ 
+?>
+<?php
+
+global $uname;
+global $ussn;
+echo "<br>".$uname."<br>";
+echo $ussn."<br>";
+echo "<br><br>This is departments page<br><br>";
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>
+<html>
+<head>
+<link href="./../style.css" rel="stylesheet" type="text/css" media="screen" />
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	//alert("hello");
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","get_departmentdata.php",true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+   <h3>DEPARTMENT</h3>
+<button type="button" onclick="loadXMLDoc()">Get List of Departments</button><br><br>
+<div id="myDiv"></div><br>
+<a href="insert_department.php"><h2>Create a Department</h2></a><br><br>
+Select the Department to delete :
+<?php
+require 'connect.inc.php';
+
+$sql="SELECT * FROM DEPARTMENT1 D1,DEPARTMENT2 D2 where D1.NAME=D2.NAME";
+
+$result = mysql_query($sql);
+
+echo "<form action='department.php' method='POST'><select name='cat'>";
+
+while($row = mysql_fetch_array($result))
+  {
+    $x=$row['NAME'];
+  echo "<option value='$x'>" . $row['NAME'] ."</option>";
+  }
+echo "<input type='submit' class='submit' value='Delete'>";
+echo "</form>";
+
+?>
+
+<a href="logout.php">Logout</a>
+</body>
+</html>

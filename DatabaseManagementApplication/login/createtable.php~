@@ -1,0 +1,4 @@
+<form action="table.php">
+No of columns:<input type="text" name="no">
+<button type="submit" value="proceed">
+</button>

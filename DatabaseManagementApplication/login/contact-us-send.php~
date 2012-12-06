@@ -1,0 +1,14 @@
+<?php
+if(isset(_POST['submit']))
+{
+	$email = $_POST['email'] ;
+  $subject = $_POST['subject'] ;
+  $message = $_POST['message'] ;
+  mail("yash.girdhar@gmail.com", $subject,
+  $message, "From:" . $email);
+  echo "Thank you for using our mail form";
+	}
+else{
+header('location: mail.php');	
+	}
+?>

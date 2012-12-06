@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Website Design by Yashasvi Girdhar , Mohit Aggarwal
+http://www.LEPunjabiChef.in
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>LE Punjabi Chef </title>
+<meta name="keywords" content="LE Punjabi Chef,Punjabi,Punjabi restaurant" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="header">
+  <div id="logo">
+		<img src="http://www.logomaker.com/logo-images/e37b3b916a76f271.gif"/>
+<a href="http://www.logomaker.com"><img src="http://www.logomaker.com/images/logos.gif" alt="free logos" border="0"/></a>
+  </div><br><br>
+	<div id="splash"><a href="#"><img src="./images/kitchen.jpg"  border="0" width="754" height="266" /></a></div>
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+			<li><a href="login/register.php" accesskey="3" title="">Register</a></li>
+			<li><a href="login/login.inc.php" accesskey="4" title="">Login</a></li>
+			<li><a href="#" >Contact us</a></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<hr />
+<!-- start page -->
+<div id="wrapper">
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+	  <div class="post">
+			<h2 class="title">About LE Punjabi Chef</h2>
+			<div class="entry"> LE Punjabi Chef dolor sit amet, consectetur adipiscing elit. Morbi at justo eu odio ultrices sagittis ut quis mi. Proin ac neque augue. Mauris eget pretium nulla. Sed fringilla augue tortor. Phasellus non egestas orci. Ut justo arcu, eleifend eu vestibulum eget, fermentum quis tortor. Phasellus sit amet risus eget nisi interdum vulputate. Nam sit amet arcu leo, id ullamcorper velit. Ut cursus felis at arcu dictum pharetra. Praesent elementum lectus nec lacus elementum nec sollicitudin eros tincidunt.
+
+Ut lorem orci, sollicitudin sit amet molestie vel, vehicula id nulla. Fusce quis libero augue. Nulla suscipit, neque id posuere adipiscing, tortor elit tristique leo, sed consectetur neque tellus quis ipsum. Quisque sit amet neque in turpis pulvinar commodo. Morbi sagittis nulla at metus semper quis porttitor leo scelerisque. Etiam bibendum porttitor sapien, eget facilisis lectus rutrum vitae. In hac habitasse platea dictumst. Suspendisse sit amet risus in purus imperdiet commodo. Curabitur in magna magna, in rhoncus ligula. Nulla facilisi. 
+
+        </div>
+	  </div>
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>MENU</h2>
+				<ul>
+					<li><a href="login/Indian.php">> Indian</a></li>
+					<li><a href="login/Continental.php">> Continental </a></li>
+					<li><a href="login/Chinese.php">> Chinese</a></li>
+			    </ul>
+		      <!-- end sidebar -->
+	</li>
+		</ul>
+	</div> 
+	<div style="clear: both;">&nbsp;</div>
+</div>
+</div><!-- end page -->
+<div id="footer">
+	<p class="credit">Website designed by <a href="http://web.iiit.ac.in/~yashasvi.girdhar">Yashasvi and Mohit</a></p>
+</div>
+</body>
+</html>
